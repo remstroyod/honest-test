@@ -1,0 +1,41 @@
+header {
+  &.header {
+    padding: 30px 0;
+    margin: 0 0 30px 0;
+    .nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > li {
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        position: relative;
+
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+
+        &.add {
+          &::before {
+            $size: 26px;
+
+            content: '';
+            display: flex;
+            width: $size;
+            height: $size;
+            background: url("/images/add.svg") center center no-repeat;
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
